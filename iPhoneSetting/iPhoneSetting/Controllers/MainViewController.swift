@@ -27,11 +27,11 @@ class MainViewController: UIViewController {
         
         mainTableView.clipsToBounds = true
         mainTableView.layer.cornerRadius = 15
-        view.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 246/255, alpha: 1)
+        view.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 245/255, alpha: 1)
         title = "설정"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        mainTableView.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 246/255, alpha: 1)
+        mainTableView.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 245/255, alpha: 1)
         
         sectionDataManager.makeSection()
         makedModel = sectionDataManager.models
