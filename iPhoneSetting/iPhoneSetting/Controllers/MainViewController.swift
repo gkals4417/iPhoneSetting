@@ -13,7 +13,6 @@ class MainViewController: UIViewController {
     let sectionDataManager = SectionDataManager()
 
     var makedModel: [Section] = []
-    var sectionInt: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +27,15 @@ class MainViewController: UIViewController {
         
         mainTableView.clipsToBounds = true
         mainTableView.layer.cornerRadius = 15
-        view.backgroundColor = UIColor(red: 247/255, green: 246/255, blue: 247/255, alpha: 1)
+        view.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 246/255, alpha: 1)
         title = "설정"
         navigationController?.navigationBar.prefersLargeTitles = true
         
+        mainTableView.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 246/255, alpha: 1)
+        
         sectionDataManager.makeSection()
         makedModel = sectionDataManager.models
+        //print(makedModel)
     }
 }
 
@@ -44,21 +46,26 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        sectionInt = section
+        //sectionTitle = makedModel[section].options
+        //print(sectionTitle)
         return makedModel[section].options.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = mainTableView.dequeueReusableCell(withIdentifier: "itemCell") as! TableViewCell
-        cell.mainLabel.text = makedModel[sectionInt].options[indexPath.row].title
+        cell.mainLabel.text = makedModel[indexPath.section].options[indexPath.row].title
+        cell.iconImageView.image = makedModel[indexPath.section].options[indexPath.row].icon
         return cell
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return makedModel[section].title
+//        return makedModel[section].title
+        return nil
     }
     
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return ""
+        return nil
     }
+    
+    
 }
