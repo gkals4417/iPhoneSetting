@@ -21,17 +21,17 @@ class MainViewController: UIViewController {
     }
 
     func configUI(){
-        mainTableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
+        mainTableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: CellIdentifier.listCellIdentifier)
         mainTableView.dataSource = self
         mainTableView.delegate = self
         
         mainTableView.clipsToBounds = true
         mainTableView.layer.cornerRadius = 15
-        view.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 245/255, alpha: 1)
+        view.backgroundColor = Colors.systemgray6Color
         title = "설정"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        mainTableView.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 245/255, alpha: 1)
+        mainTableView.backgroundColor = Colors.systemgray6Color
         
         sectionDataManager.makeSection()
         makedModel = sectionDataManager.models
@@ -52,9 +52,14 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = mainTableView.dequeueReusableCell(withIdentifier: "itemCell") as! TableViewCell
+        let cell = mainTableView.dequeueReusableCell(withIdentifier: CellIdentifier.listCellIdentifier) as! TableViewCell
         cell.mainLabel.text = makedModel[indexPath.section].options[indexPath.row].title
+        cell.iconImageView.layer.cornerRadius = 5
+        cell.iconImageView.clipsToBounds = true
+        cell.iconImageView.tintColor = .white
+        
         cell.iconImageView.image = makedModel[indexPath.section].options[indexPath.row].icon
+        cell.iconImageView.backgroundColor = makedModel[indexPath.section].options[indexPath.row].iconBackgroundColor
         return cell
     }
 

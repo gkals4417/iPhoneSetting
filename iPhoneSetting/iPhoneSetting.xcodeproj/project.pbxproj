@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D2C359728A35FE500835583 /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C359628A35FE500835583 /* constant.swift */; };
 		4DA49717289BA0E600F6D7D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA49716289BA0E600F6D7D4 /* AppDelegate.swift */; };
 		4DA49719289BA0E600F6D7D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA49718289BA0E600F6D7D4 /* SceneDelegate.swift */; };
 		4DA4971B289BA0E600F6D7D4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA4971A289BA0E600F6D7D4 /* MainViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D2C359628A35FE500835583 /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
 		4DA49713289BA0E600F6D7D4 /* iPhoneSetting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneSetting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA49716289BA0E600F6D7D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DA49718289BA0E600F6D7D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D2C359528A35FD800835583 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4D2C359628A35FE500835583 /* constant.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		4DA4970A289BA0E600F6D7D4 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +79,7 @@
 				4DA4971F289BA0E600F6D7D4 /* Assets.xcassets */,
 				4DA49721289BA0E600F6D7D4 /* LaunchScreen.storyboard */,
 				4DA49724289BA0E600F6D7D4 /* Info.plist */,
+				4D2C359528A35FD800835583 /* Helpers */,
 				4DA49735289BEFD000F6D7D4 /* Models */,
 				4DD2715A28A21BBD00A1508B /* Views */,
 				4DD2715B28A21BCA00A1508B /* Controllers */,
@@ -176,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DA4971B289BA0E600F6D7D4 /* MainViewController.swift in Sources */,
+				4D2C359728A35FE500835583 /* constant.swift in Sources */,
 				4DA4972C289BA1DF00F6D7D4 /* TableViewCell.swift in Sources */,
 				4DA49737289BEFE400F6D7D4 /* SectionData.swift in Sources */,
 				4DA49747289BF99B00F6D7D4 /* BasicModel.swift in Sources */,
